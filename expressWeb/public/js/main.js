@@ -4,14 +4,15 @@ const submitBtn = document.getElementById("submitBtn");
 
 const city_name = document.getElementById("city_name");
 
-const temp_real_val = document.getElementById("temp");
+const temp_real_val = document.getElementById("temp_real_val");
 
 const temp_status = document.getElementById("temp_status");
 
-const data_hide = document.querySelector(".middle_layer");
+const datahide = document.querySelector(".middle_layer");
 
 const getInfo = async (event) => {
      event.preventDefault();
+
      let cityVal = cityName.value;
 
      if (cityVal === "") {
@@ -23,11 +24,13 @@ const getInfo = async (event) => {
           try {
                let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=eaf8c53e9c44d7e41901af137550846c`
                const response = await fetch(url);
+
                const data = await response.json();
-               console.log(data);
+               // console.log(data);
                const arrData = [data];
 
-               city_name.innerText = `{arrData[0].sys.country}`;
+               // city_name.innerText = `${arrData[0].sys.country}`;
+               city_name.innerText = `${arrData[0].name}, ${arrData[0].sys.country}`;
                temp_real_val.innerText = arrData[0].main.temp;
                temp_status.innerText = arrData[0].weather[0].main;
                const tempMood = arrData[0].weather[0].main;
