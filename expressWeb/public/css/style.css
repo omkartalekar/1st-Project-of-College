@@ -75,6 +75,25 @@ body {
 
 /* main header part  */
 
+.weatherimg{
+  min-height: 100%;
+  /* position: absolute; */
+  background: url(../image/weather.png) no-repeat center center  fixed ;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-size: cover;
+  
+}
+
+.bghome{
+  min-height: 100%;
+  /* position: absolute; */
+  background: url(../image/bghome.png) no-repeat center center  fixed ;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-size: cover;
+}
+
 .main_header_left {
   height: 70rem;
   display: flex;
@@ -109,7 +128,9 @@ body {
 }
 
 .main_header_left button:hover {
-  box-shadow: 0 8px 6px -6px var(--main-color);
+  box-shadow: 0 15px 19px -6px;
+  color: black;
+  
   /* border: 1px solid var(--main-color); */
 }
 
@@ -257,33 +278,9 @@ sup {
   height: 30rem;
 }
 
-footer p {
-  margin: 0;
-  text-align: center;
-  line-height: 5rem;
-  color: #fff;
-  font-size: 1.4rem;
-}
 
 /* responsive code  */
 
-@media (max-width: 768px) {
-  .main_header_left {
-    height: auto;
-    margin: 5rem 0;
-  }
-
-  .main_header_right {
-    height: auto;
-    margin-top: 3rem;
-  }
-
-  .main_layer .middle_layer p,
-  .main_layer .middle_layer .fa {
-    font-size: 5rem;
-    font-weight: 900;
-  }
-}
 
 /* footer style  */
 
