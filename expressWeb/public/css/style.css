@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 * {
   margin: 0;
@@ -24,11 +25,11 @@ html {
 body {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
 }
 
 .row {
-  margin: 5px;
+  margin: 0;
 }
 
 /* navbar style */
@@ -42,11 +43,6 @@ body {
   background-color: var(--main-bg);
   padding: 2rem 0;
 }
-
-.navbar li {
-  margin-left: 5rem; 
-}
-
 .navbar a {
   color: #fff;
   font-size: 4.8rem;
@@ -54,6 +50,10 @@ body {
 
 .navbar a:hover {
   color: var(--main-color);
+}
+
+.navbar li {
+  margin-left: 2rem; 
 }
 
 .navbar-toggler {
@@ -79,12 +79,11 @@ body {
 
 .weatherimg{
   min-height: 100%;
-  position: absolute;
+  /* position: absolute; */
   background: url(../image/weather.png) no-repeat center center  fixed ;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-size: cover;
-  
+  background-size: cover; 
 }
 
 .bghome{
@@ -115,7 +114,7 @@ body {
 }
 
 .main_header_left {
-  /* height: 50rem; */
+  height: 70rem;
   display: flex;
   flex-direction: column; 
   justify-content: center;
@@ -130,13 +129,16 @@ body {
 } 
 
 .main_header_left p {
-  font-size: 5rem;
+  font-size: 10rem;
+  font-family: "Roboto", sans-serif
 }
 
 .main_header_left h1 {
-  font-size: 8rem;
-  margin: 1rem 0 4rem 0;
+  font-size: 12rem;
+  margin: 2rem 0 4rem 0;
   text-transform: capitalize;
+  /* font-family: "Piazzolla", serif; */
+  font-family: "Oswald", serif;
 }
 
 .main_header_left .weatherclr{
@@ -148,9 +150,10 @@ body {
 }
 
 .main_header_left button {
+  margin: 8rem;
   border:10px solid black;
   padding: 0.8rem 1.8rem;
-  font-size: 1.4rem;
+  font-size: 6.4rem;
   border-radius: 8rem;
   text-transform: uppercase;
   box-shadow: 0 5px 5px -6px black;
@@ -170,7 +173,6 @@ body {
 
 .main_header_right {
   height: 70rem;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,25 +181,22 @@ body {
 
 .main_header_right figure img {
   filter: drop-shadow(0 0.5rem 3rem rgba(0, 0, 0, 0.3));
-  height: 140rem;
-  margin-top: 80rem;
+  height: 10rem; 
+  margin-top: 80rem; 
 
 }
-/* .main_content{
-  width:400rem;
-  height: 23rem;
-  
-} */
-/* .temp_form {
-  width: 100%;
+
+/* weather page style */
+/* temp input fields style code */
+
+.temp_form {
+  width: 60%;
   position: relative;
   margin: 5rem auto;
-} */
+}
 
 .temp_form input[type="text"] {
-  margin: 20rem;
   width: 100%;
-  height: 20rem;
   padding: 2rem 5rem 2rem 2rem;
   background: #1e202b;
   color: white;
@@ -209,24 +208,23 @@ body {
 
 ::placeholder {
   color: #bfc1c8;
-  font-size: 8rem;
-  padding: 16rem 8rem;
-  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  padding: 48rem 110rem;
+  font-family: 'Oswald', sans-serif; 
   
 }
 
 .temp_form input[type="submit"] {
   position: absolute;
-  height: 15rem;
-  top: 20rem;
-  right: 20rem; 
-  /* margin-top:40rem ; */
-  border: 2rem solid black;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: none;
   background: #009ad8;
-  padding: 8rem;
+  padding: 0 3rem;
   border-radius: 3rem;
   color: white;
-  font-size: 6rem;
+  font-size: 1.6rem;
 }
 
 
@@ -238,7 +236,7 @@ body {
 /* temp detials show here */
 
 .tempInformation {
-  width: 50rem;
+  width: 40rem;
   margin: auto;
   min-height: 20rem;
   background-color: #323544;
@@ -313,7 +311,6 @@ sup {
   visibility: hidden;
   transition: all 0.3s linear;
 }
-*/
 
 /* 404 error page  */
 .main_header_left .errimg img {
@@ -321,14 +318,11 @@ sup {
   height: 30rem;
 }
 
-
-/* responsive code  */
-
-
 /* footer style  */
 
 footer {
   width: 100%;
+  /* height: 5rem; */
   background-color: var(--main-bg);
   margin-top: auto;
 }
@@ -336,28 +330,37 @@ footer {
 footer p {
   margin: 0;
   text-align: center;
+  line-height: 5rem;
   color: #fff;
-  line-height: 10rem;
-  font-size: 4rem;
+  font-size: 4.4rem;
 }
 
 /* weather page style */
 /* temp input fields style code */
 
+
 /* responsive code */
-@media (max-width: 768) {
+@media (max-width: 768px) {
   .main_header_left {
     height: auto;
-    margin: 5 rem 0;
+    margin: 5rem 0;
   }
+
   .main_header_right {
     height: auto;
     margin-top: 3rem;
   }
-}
 
-.main_layer .middle_layer p,
-.main_layer .middle_layer .fa {
-  font-size: 5rem;
-  font-weight: 900;
+  .temp_form {
+    width: auto;
+  }
+  .tempInformation {
+    width: auto;
+  }
+
+  .main_layer .middle_layer p,
+  .main_layer .middle_layer .fa {
+    font-size: 5rem;
+    font-weight: 900;
+  }
 }
