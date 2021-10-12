@@ -4,7 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,8 +21,9 @@
 }
 
 html {
-  height: 100%;
+  /* height: 100vh; */
   font-size: 62.5%;
+  margin:0;
 }
 
 body {
@@ -28,8 +32,8 @@ body {
   flex-direction:column;
 }
 
-.row {
-  margin: 0;
+.row .row{
+  margin: 0rem;
 }
 
 /* navbar style */
@@ -42,18 +46,20 @@ body {
   color: #fff;
   background-color: var(--main-bg);
   padding: 2rem 0;
-}
-.navbar a {
-  color: #fff;
-  font-size: 4.8rem;
-}
-
-.navbar a:hover {
-  color: var(--main-color);
+  height: 18rem;
 }
 
 .navbar li {
   margin-left: 2rem; 
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 5.8rem;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
 }
 
 .navbar-toggler {
@@ -88,10 +94,10 @@ body {
 
 .bghome{
   min-height: 100%;
-  /* position: absolute; */
-  background: url(../image/bghome.png) no-repeat center center  fixed ;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  position: relative;
+  background: url(../image/bghome.png) no-repeat center center  ;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
   background-size: cover;
 }
 
@@ -105,48 +111,53 @@ body {
 }
 
 .tvbgimg{
-  /* min-height: 100%; */
+  min-height: 100%;
   /* position: absolute; */
-  background: url(../image/tvbgimg.jpg) no-repeat center center fixed;
-  /* overflow-y: hidden;
-  overflow-x: hidden; */
+  background: url(../image/tvbgimg.jpg) no-repeat center center ;
   background-size: cover;
+
 }
+/* error page style */
+.row .errimgsize{
+  height: 200rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+} 
 
 .main_header_left {
   height: 70rem;
   display: flex;
   flex-direction: column; 
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 220rem;
+  margin-top: -30rem;
+  /* margin-bottom: 10rem; */
 }
 
-/* error page style */
-.row .errimgsize{
-  height: 200rem;
-  align-items: center;
-  justify-content: center;
-} 
-
 .main_header_left p {
-  font-size: 10rem;
-  font-family: "Roboto", sans-serif
+  font-size: 11rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 90rem;
 }
 
 .main_header_left h1 {
   font-size: 12rem;
-  margin: 2rem 0 4rem 0;
+  position: relative;
+  /* margin: 2rem 0 4rem 0; */
   text-transform: capitalize;
-  /* font-family: "Piazzolla", serif; */
   font-family: "Oswald", serif;
+  margin-top: -85rem;
+  
+}
+
+.text_clr {
+  color:rgb(233, 222, 210);
 }
 
 .main_header_left .weatherclr{
   color:rgb(59, 62, 228)
-}
-
- .text_clr {
-  color:rgb(233, 222, 210);
 }
 
 .main_header_left button {
@@ -174,59 +185,71 @@ body {
 .main_header_right {
   height: 70rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  size: 110rem;
+  /* flex-direction:column; */
+  justify-content:center;
+  align-items:flex-start;
+  margin-top: 50rem;
 }
 
 .main_header_right figure img {
-  filter: drop-shadow(0 0.5rem 3rem rgba(0, 0, 0, 0.3));
-  height: 10rem; 
-  margin-top: 80rem; 
 
+  filter: drop-shadow(0 0.5rem 3rem 1rem rgba(0, 0, 0, 0.3)); 
+  height: 150rem;
+  margin-right: 170rem;
 }
 
 /* weather page style */
 /* temp input fields style code */
-
 .temp_form {
-  width: 60%;
+  width: 80%;
   position: relative;
-  margin: 5rem auto;
+  margin: 55rem auto 18rem;
 }
 
 .temp_form input[type="text"] {
   width: 100%;
-  padding: 2rem 5rem 2rem 2rem;
+  padding: 5rem 7rem 8rem 6rem;
   background: #1e202b;
   color: white;
   outline: none;
-  border: none;
-  font-size: 1.7rem;
-  border-radius: 3rem;
+  border: 2rem solid rgb(233, 227, 227);
+  font-size: 7.7rem;
+  border-radius: 7rem;
+  
+}
+#cityName{
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  font-size: 10rem;
+  
 }
 
 ::placeholder {
   color: #bfc1c8;
-  font-size: 3rem;
-  padding: 48rem 110rem;
-  font-family: 'Oswald', sans-serif; 
-  
+  font-size: 7rem;
+  /* padding: 48rem 110rem; */
+  /* font-family: 'Oswald', sans-serif;  */
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 6rem;
 }
 
 .temp_form input[type="submit"] {
   position: absolute;
-  top: 5px;
+  top: 3px;
   right: 5px;
-  bottom: 5px;
-  border: none;
+  bottom: 3px;
+  border: 2rem solid rgb(7, 85, 85);
   background: #009ad8;
   padding: 0 3rem;
-  border-radius: 3rem;
+  border-radius: 7rem;
   color: white;
-  font-size: 1.6rem;
+  font-size: 4.6rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
 }
-
 
 .temp_form input[type="submit"]:hover {
   color: #009ad8;
@@ -236,11 +259,13 @@ body {
 /* temp detials show here */
 
 .tempInformation {
-  width: 40rem;
+  width: 120rem;
+  height: 90rem;
   margin: auto;
-  min-height: 20rem;
+  min-height: 30rem;
   background-color: #323544;
-  border-radius: 1rem;
+  border-radius: 3rem;
+  border: 2rem solid rgb(91, 169, 201);
   padding: 1rem;
   font-family: "Roboto", sans-serif;
 }
@@ -257,24 +282,25 @@ body {
 }
 
 #day{
-  font-size: 2.9rem;
+  font-size: 5.9rem;
   font-family:serif;
-
 }
 
 #today_date{
-  font-size: 3rem;
+  font-size: 6rem;
   font-family:serif;
 }
 
 .top_layer p {
   color: #fff;
   font-weight: 300;
+  padding: 2rem;
+  font-size: 1.4rem;
 }
 
 .main_layer {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -283,7 +309,8 @@ body {
   padding: 2rem 0;
   color: #bfc1c8;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 8rem;
+  text-align: center;
 }
 
 .main_layer .middle_layer {
@@ -294,7 +321,7 @@ body {
 
 .main_layer .middle_layer p,
 .main_layer .middle_layer .fa {
-  font-size: 7rem;
+  font-size: 20rem;
   font-weight: 900;
 }
 
@@ -303,8 +330,8 @@ body {
 }
 
 sup {
-  font-size: 6rem;
-  margin-top: -2rem;
+  font-size: 10rem;
+  margin-top: -25rem;
 }
 
 .data_hide {
@@ -313,26 +340,27 @@ sup {
 }
 
 /* 404 error page  */
-.main_header_left .errimg img {
+.errimg img {
   width: 60rem;
   height: 30rem;
 }
 
 /* footer style  */
-
 footer {
   width: 100%;
-  /* height: 5rem; */
+  height: 10rem;
+  /* position: relative; */
   background-color: var(--main-bg);
-  margin-top: auto;
+  margin: 2rem;
+  text-align: center;
 }
 
 footer p {
-  margin: 0;
+  margin: auto;
   text-align: center;
   line-height: 5rem;
   color: #fff;
-  font-size: 4.4rem;
+  font-size: 7.4rem;
 }
 
 /* weather page style */

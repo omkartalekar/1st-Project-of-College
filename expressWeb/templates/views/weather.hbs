@@ -15,7 +15,7 @@
             <div class="col-md-10 col-12 mx-auto weatherDetails">
                 <div class=" container-fluid main_content">
                      <form class="temp_form">
-                         <input type="text" id="cityName" placeholder="ENTER YOUR CITY NAME" autocomplete="off">
+                        <input type="text" id="cityName"  placeholder="ENTER YOUR CITY NAME" autocomplete="off">
                           <input type="submit" value="search" id="submitBtn">
                      </form>
                 </div>
@@ -55,15 +55,10 @@
            weekDay[6]="Saturday";
            
            let currentTime=new Date();
-
            days=weekDay[currentTime.getDay()];
-
            let day=document.getElementById("day");
-
            day.innerText=days;
-
         };
-
        //Get and format current time
       const getCurrentTime = () => {
         var months = [
@@ -80,21 +75,15 @@
           "November",
           "December",
         ];
-
         let now = new Date();
         let month = months[now.getMonth()];
         let date = now.getDate();
         let year=now.getFullYear();
-
         let allDAte=document.getElementById("today_date");
         today_date.innerText=date+" " +month + " " + year;
       }
-
         getCurrentDay();
         getCurrentTime();
-
-
-
     </script>
 
 </body>
