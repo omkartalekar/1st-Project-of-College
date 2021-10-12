@@ -21,7 +21,7 @@
 }
 
 html {
-  /* height: 100vh; */
+  height: 100%;
   font-size: 62.5%;
   margin:0;
 }
@@ -124,6 +124,13 @@ body {
   justify-content: center;
   min-height: 100%;
 } 
+
+.main_header.main_header_index{
+  color: red;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: flex-start;
+}
 
 .main_header_left {
   height: 70rem;
